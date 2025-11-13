@@ -5,6 +5,7 @@ pipeline{
         stage('Dep install'){
             agent { docker { image 'node:14' }}
             steps{
+                sh 'npm cache clean'
                 sh 'npm install'
             }
         }
