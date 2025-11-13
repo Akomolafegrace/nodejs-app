@@ -6,7 +6,7 @@ pipeline{
             agent { docker { image 'node:18' 
                args '-u root:root'}}
             steps{
-                sh 'npm cache clean'
+                sh 'npm cache clean --force'
                 sh 'npm install'
             }
         }
